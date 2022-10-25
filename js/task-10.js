@@ -5,7 +5,7 @@ function getRandomHexColor() {
 const controlsRef = document.querySelector("#controls");
 const boxesWrapperRef = document.querySelector("#boxes");
 const inputRef = controlsRef.firstElementChild;
-const renderBtnRef = controlsRef.querySelector("button[data-create]");
+const createBtnRef = controlsRef.querySelector("button[data-create]");
 const destroyBtnRef = controlsRef.querySelector("button[data-destroy]");
 
 function createBoxes(amount) {
@@ -25,5 +25,5 @@ function destroyBoxes() {
   boxesRef.forEach((box) => box.remove());
 }
 
-renderBtnRef.addEventListener("click", () => createBoxes(inputRef.value));
+createBtnRef.addEventListener("click", () => createBoxes(inputRef.value));
 destroyBtnRef.addEventListener("click", destroyBoxes);
